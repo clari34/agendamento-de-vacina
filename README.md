@@ -1,16 +1,21 @@
-# flutter_application_1
+# Agendamento de vacinação
 
-A new Flutter project.
+Aplicação direcionada para a disciplina de PRMO. 
 
-## Getting Started
+## Distribuição dos trabalhos:
+- TODO [renilsonjs]:
+Criar tela inicial;
 
-This project is a starting point for a Flutter application.
+- TODO [clari34]:
+Criar tela de cadastro;
 
-A few resources to get you started if this is your first Flutter project:
+- TODO [dudinha21]:
+Criar tela de agendamento;
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- TODO [vivianepio]:
+Criar tela de opções;
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- TODO [mariguedes]:
+Criar tela para consultar o agendamento;
+
+
