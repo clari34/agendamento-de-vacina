@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_application_1/cadastro.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -88,7 +89,20 @@ class _HomePageState extends State<HomePage> {
                     'ENTRAR',
                     style: TextStyle(color: Colors.white, fontSize: 16),
                   ),
-                )
+                ),
+                SizedBox(height: 30),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => CadsPage()),
+                    );
+                  },
+                  child: Text(
+                    'NOVO POR AQUI? FAÇA SEU CADASTRO!',
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  ),
+                ),
               ],
             ),
           ),
