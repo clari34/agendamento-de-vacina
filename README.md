@@ -12,10 +12,10 @@ Criar tela de cadastro;
 - TODO [dudinha21]:
 Criar tela de agendamento;
 
-- TODO [vivianepio]:
+- TODO [Viviannepio]:
 Criar tela de opções;
 
-- TODO [mariguedes]:
+- TODO [MarianaGuedes]:
 Criar tela para consultar o agendamento;
 
 
