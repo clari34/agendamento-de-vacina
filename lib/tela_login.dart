@@ -30,9 +30,12 @@ class _HomePageState extends State<HomePage> {
       flexibleSpace: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
-          colors: [Color(0xFF2AF598), Color(0xFF08AEEA)],
-          begin: Alignment.bottomRight,
-          end: Alignment.topLeft,
+              colors: [
+                Color(0xFF2AF598), 
+                Color(0xFF08AEEA)
+              ],
+              begin: Alignment.bottomRight,
+              end: Alignment.topLeft,
         )),
       ),
     );
@@ -41,71 +44,121 @@ class _HomePageState extends State<HomePage> {
   buildBody() {
     return Material(
       child: Container(
+        color: Colors.white,
         padding: EdgeInsets.only(
-          top: 60,
+          top: 50,
           left: 60,
           right: 60,
         ),
-        color: Colors.white,
-        child: SizedBox(
-          width: double.infinity,
-          height: double.infinity,
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                TextField(
-                  keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
-                      labelText: 'CPF',
-                      labelStyle: TextStyle(
-                        color: Colors.black38,
-                        fontWeight: FontWeight.w400,
-                        fontSize: 16,
-                      )),
-                  style: TextStyle(
-                    fontSize: 16,
-                  ),
-                ),
-                SizedBox(height: 20),
-                TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                      labelText: 'Senha',
-                      labelStyle: TextStyle(
-                        color: Colors.black38,
-                        fontWeight: FontWeight.w400,
-                        fontSize: 16,
-                      )),
-                  style: TextStyle(
-                    fontSize: 16,
-                  ),
-                ),
-                SizedBox(height: 30),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    'ENTRAR',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
-                  ),
-                ),
-                SizedBox(height: 30),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => CadsPage()),
-                    );
-                  },
-                  child: Text(
-                    'NOVO POR AQUI? FAÇA SEU CADASTRO!',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
-                  ),
-                ),
-              ],
+        child: ListView(
+          children: <Widget> [
+            SizedBox(
+              width: 120,
+              height: 120,
+              child: Image.asset("assets/imagens/vacina.png"),
             ),
-          ),
+            SizedBox(height: 20),
+            TextFormField(
+              autofocus: true,
+              keyboardType: TextInputType.number,
+              style: TextStyle(fontSize: 18),
+              decoration: InputDecoration(
+                labelText: "CPF",
+                labelStyle: TextStyle(
+                  color: Colors.black38,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 16,
+                ),
+              ),
+            ),
+            SizedBox(height: 10),
+            TextFormField(
+              autofocus: true,
+              obscureText: true,
+              style: TextStyle(fontSize: 18),
+              decoration: InputDecoration(
+                labelText: "Senha",
+                labelStyle: TextStyle(
+                  color: Colors.black38,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 16,
+                ),
+              ),
+            ),
+            Container(
+              height: 40,
+              alignment: Alignment.centerRight,
+              child: TextButton(
+                child: Text(
+                  "Esqueceu sua senha?"
+                ),
+                onPressed: () {},
+              ),
+            ),
+            SizedBox(height: 10),
+            Container(
+              height: 50,
+              alignment: Alignment.centerLeft,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.bottomRight,
+                  end: Alignment.topLeft,
+                  colors: [
+                    Color(0xFF80D0C7), 
+                    Color(0xFF0093E9)
+                  ],
+              ),
+              borderRadius: BorderRadius.all(
+                Radius.circular(10),
+              ),
+              ),
+              child: SizedBox.expand(
+                child: TextButton(
+                  onPressed: () {},
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget> [
+                      Padding(
+                        padding: EdgeInsets.only(left: 25),
+                        child: Text(
+                          "Entrar",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 18
+                        ),
+                        textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(right: 25),
+                        child: Icon(
+                          Icons.login,
+                          color: Colors.white,
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              ),
+            ),
+            SizedBox(height: 10),
+            Container(
+              height: 40,
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CadsPage()),
+                  );
+                },
+                child: Text(
+                  "Cadastre-se",
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
