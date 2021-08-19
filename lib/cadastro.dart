@@ -44,22 +44,22 @@ class _CadsPageState extends State<CadsPage> {
     return Material(
       child: Container(
         padding: EdgeInsets.only(
-          top: 60,
-          left: 60,
-          right: 60,
+          top: 20,
+          left: 20,
+          right: 20,
         ),
         color: Colors.white,
         child: SizedBox(
           width: double.infinity,
           height: double.infinity,
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(3.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  width: 50,
-                  height: 50,
+                SizedBox(
+                  width: 100,
+                  height: 100,
                   child: Image.asset('assets/imagens/user.jpeg'),
                 ),
                 TextField(
@@ -75,7 +75,7 @@ class _CadsPageState extends State<CadsPage> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 7),
                 TextField(
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
@@ -89,7 +89,7 @@ class _CadsPageState extends State<CadsPage> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 7),
                 TextField(
                   obscureText: true,
                   decoration: InputDecoration(
@@ -103,7 +103,7 @@ class _CadsPageState extends State<CadsPage> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 7),
                 TextField(
                   keyboardType: TextInputType.name,
                   decoration: InputDecoration(
@@ -117,7 +117,7 @@ class _CadsPageState extends State<CadsPage> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 7),
                 TextField(
                   keyboardType: TextInputType.datetime,
                   decoration: InputDecoration(
@@ -131,7 +131,7 @@ class _CadsPageState extends State<CadsPage> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 7),
                 TextField(
                   keyboardType: TextInputType.name,
                   decoration: InputDecoration(
@@ -145,7 +145,7 @@ class _CadsPageState extends State<CadsPage> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 7),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(primary: Color(0xFF104A89)),
                   onPressed: () {
