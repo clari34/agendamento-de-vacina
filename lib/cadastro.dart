@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_application_1/op_agendamento.dart';
 
 class CadsPage extends StatefulWidget {
   const CadsPage({Key? key}) : super(key: key);
@@ -56,6 +57,11 @@ class _CadsPageState extends State<CadsPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Container(
+                  width: 50,
+                  height: 50,
+                  child: Image.asset('assets/images/user.jpeg'),
+                ),
                 TextField(
                   keyboardType: TextInputType.name,
                   decoration: InputDecoration(
@@ -69,7 +75,7 @@ class _CadsPageState extends State<CadsPage> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 15),
                 TextField(
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
@@ -83,7 +89,7 @@ class _CadsPageState extends State<CadsPage> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 10),
                 TextField(
                   obscureText: true,
                   decoration: InputDecoration(
@@ -97,7 +103,7 @@ class _CadsPageState extends State<CadsPage> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 15),
                 TextField(
                   keyboardType: TextInputType.name,
                   decoration: InputDecoration(
@@ -111,7 +117,7 @@ class _CadsPageState extends State<CadsPage> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 15),
                 TextField(
                   keyboardType: TextInputType.datetime,
                   decoration: InputDecoration(
@@ -125,7 +131,7 @@ class _CadsPageState extends State<CadsPage> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 15),
                 TextField(
                   keyboardType: TextInputType.name,
                   decoration: InputDecoration(
@@ -139,9 +145,15 @@ class _CadsPageState extends State<CadsPage> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 15),
                 ElevatedButton(
-                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(primary: Color(0xFF104A89)),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => OpPage()),
+                    );
+                  },
                   child: Text(
                     'CADASTRAR',
                     style: TextStyle(color: Colors.white, fontSize: 16),

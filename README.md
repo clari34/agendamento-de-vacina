@@ -7,7 +7,7 @@ Aplicação direcionada para a disciplina de PRMO.
 Criar tela inicial;
 
 - TODO [clari34]:
-Criar tela de cadastro;
+Criar tela de cadastro e a de Informações;
 
 - TODO [dudinha21]:
 Criar tela de agendamento;

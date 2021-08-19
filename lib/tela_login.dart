@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_application_1/cadastro.dart';
+import 'package:flutter_application_1/op_agendamento.dart';
+import 'package:flutter_application_1/infos.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -30,12 +32,9 @@ class _HomePageState extends State<HomePage> {
       flexibleSpace: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [
-                Color(0xFF2AF598), 
-                Color(0xFF08AEEA)
-              ],
-              begin: Alignment.bottomRight,
-              end: Alignment.topLeft,
+          colors: [Color(0xFF2AF598), Color(0xFF08AEEA)],
+          begin: Alignment.bottomRight,
+          end: Alignment.topLeft,
         )),
       ),
     );
@@ -51,7 +50,7 @@ class _HomePageState extends State<HomePage> {
           right: 60,
         ),
         child: ListView(
-          children: <Widget> [
+          children: <Widget>[
             SizedBox(
               width: 120,
               height: 120,
@@ -89,9 +88,7 @@ class _HomePageState extends State<HomePage> {
               height: 40,
               alignment: Alignment.centerRight,
               child: TextButton(
-                child: Text(
-                  "Esqueceu sua senha?"
-                ),
+                child: Text("Esqueceu sua senha?"),
                 onPressed: () {},
               ),
             ),
@@ -103,44 +100,44 @@ class _HomePageState extends State<HomePage> {
                 gradient: LinearGradient(
                   begin: Alignment.bottomRight,
                   end: Alignment.topLeft,
-                  colors: [
-                    Color(0xFF80D0C7), 
-                    Color(0xFF0093E9)
-                  ],
-              ),
-              borderRadius: BorderRadius.all(
-                Radius.circular(10),
-              ),
+                  colors: [Color(0xFF80D0C7), Color(0xFF0093E9)],
+                ),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(10),
+                ),
               ),
               child: SizedBox.expand(
-                child: TextButton(
-                  onPressed: () {},
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget> [
-                      Padding(
-                        padding: EdgeInsets.only(left: 25),
-                        child: Text(
-                          "Entrar",
-                          style: TextStyle(
+                  child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => OpPage()),
+                  );
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.only(left: 25),
+                      child: Text(
+                        "Entrar",
+                        style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
-                            fontSize: 18
-                        ),
+                            fontSize: 18),
                         textAlign: TextAlign.left,
-                        ),
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(right: 25),
-                        child: Icon(
-                          Icons.login,
-                          color: Colors.white,
-                        ),
-                      )
-                    ],
-                  ),
-                )
-              ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(right: 25),
+                      child: Icon(
+                        Icons.login,
+                        color: Colors.white,
+                      ),
+                    )
+                  ],
+                ),
+              )),
             ),
             SizedBox(height: 10),
             Container(
@@ -154,6 +151,21 @@ class _HomePageState extends State<HomePage> {
                 },
                 child: Text(
                   "Cadastre-se",
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+            Container(
+              height: 40,
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => InfosPage()),
+                  );
+                },
+                child: Text(
+                  "Mais Informações",
                   textAlign: TextAlign.center,
                 ),
               ),

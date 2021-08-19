@@ -25,7 +25,9 @@ class _OpPageState extends State<OpPage> {
       toolbarHeight: 80,
       leading: IconButton(
         icon: Icon(Icons.arrow_back),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pop(context);
+        },
       ),
       flexibleSpace: Container(
         decoration: BoxDecoration(
@@ -56,6 +58,7 @@ class _OpPageState extends State<OpPage> {
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
               SizedBox(height: 30),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(primary: Color(0xFF104A89)),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -69,6 +72,7 @@ class _OpPageState extends State<OpPage> {
               ),
               SizedBox(height: 30),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(primary: Color(0xFF104A89)),
                 onPressed: () {},
                 child: Text(
                   'VER AGENDAMENTO',
