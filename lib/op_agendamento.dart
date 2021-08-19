@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-
+import 'package:flutter_application_1/solicitacao.dart';
 
 class OpPage extends StatefulWidget {
   const OpPage({Key? key}) : super(key: key);
@@ -41,7 +41,6 @@ class _OpPageState extends State<OpPage> {
   buildBody() {
     return Material(
       child: Container(
-        
         padding: EdgeInsets.only(
           top: 10,
           left: 60,
@@ -53,32 +52,30 @@ class _OpPageState extends State<OpPage> {
           height: double.infinity,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                 SizedBox(height: 30),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => AgendPage()),
-                    );
-                  },
-                  child: Text(
-                    'SOLICITAR AGENDAMENTO',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
-                  ),
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              SizedBox(height: 30),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AgendPage()),
+                  );
+                },
+                child: Text(
+                  'SOLICITAR AGENDAMENTO',
+                  style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
-
-                 SizedBox(height: 30),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    'VER AGENDAMENTO',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
-                  ),
+              ),
+              SizedBox(height: 30),
+              ElevatedButton(
+                onPressed: () {},
+                child: Text(
+                  'VER AGENDAMENTO',
+                  style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
-              ]),
+              ),
+            ]),
           ),
         ),
       ),
