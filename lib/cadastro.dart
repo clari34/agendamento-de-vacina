@@ -60,7 +60,7 @@ class _CadsPageState extends State<CadsPage> {
                 Container(
                   width: 50,
                   height: 50,
-                  child: Image.asset('assets/images/user.jpeg'),
+                  child: Image.asset('assets/imagens/user.jpeg'),
                 ),
                 TextField(
                   keyboardType: TextInputType.name,
