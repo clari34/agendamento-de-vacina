@@ -31,7 +31,7 @@ class _CadsPageState extends State<InfosPage> {
       flexibleSpace: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
-          colors: [Color(0xFF2C2C6A), Color(0xFF104A89), Color(0xFF138AB6)],
+          colors: [Color(0xFFDA97FF), Color(0xFF138AB6)],
           begin: Alignment.bottomRight,
           end: Alignment.topLeft,
         )),
@@ -43,9 +43,9 @@ class _CadsPageState extends State<InfosPage> {
     return Material(
       child: Container(
         padding: EdgeInsets.only(
-          top: 60,
-          left: 60,
-          right: 60,
+          top: 100,
+          left: 100,
+          right: 100,
         ),
         color: Colors.white,
         child: SizedBox(
@@ -55,7 +55,16 @@ class _CadsPageState extends State<InfosPage> {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [],
+              children: [
+                SizedBox(
+                  width: 300,
+                  height: 300,
+                  child: Image.asset('assets/imagens/ampola.jpeg'),
+                ),
+                Text(
+                  'Acompanhe a Rede social',
+                ),
+              ],
             ),
           ),
         ),

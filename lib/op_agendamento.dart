@@ -32,7 +32,7 @@ class _OpPageState extends State<OpPage> {
       flexibleSpace: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
-          colors: [Color(0xFF2C2C6A), Color(0xFF104A89), Color(0xFF138AB6)],
+          colors: [Color(0xFFDA97FF), Color(0xFF138AB6)],
           begin: Alignment.bottomRight,
           end: Alignment.topLeft,
         )),

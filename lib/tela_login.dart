@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               width: 120,
               height: 120,
-              child: Image.asset("assets/imagens/vacina.png"),
+              child: Image.asset("assets/imagens/logo.png"),
             ),
             SizedBox(height: 20),
             TextFormField(
