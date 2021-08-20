@@ -68,7 +68,7 @@ class _AgendPageState extends State<AgendPage> {
                   fontSize: 16,
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 20),
               TextField(
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
@@ -83,7 +83,7 @@ class _AgendPageState extends State<AgendPage> {
                   fontSize: 16,
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 20),
               TextField(
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
@@ -97,7 +97,7 @@ class _AgendPageState extends State<AgendPage> {
                   fontSize: 16,
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 20),
               TextField(
                 keyboardType: TextInputType.name,
                 decoration: InputDecoration(
@@ -111,7 +111,7 @@ class _AgendPageState extends State<AgendPage> {
                   fontSize: 16,
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 20),
               TextField(
                 keyboardType: TextInputType.datetime,
                 decoration: InputDecoration(
@@ -125,7 +125,7 @@ class _AgendPageState extends State<AgendPage> {
                   fontSize: 16,
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 20),
               TextField(
                 keyboardType: TextInputType.name,
                 decoration: InputDecoration(
@@ -139,14 +139,47 @@ class _AgendPageState extends State<AgendPage> {
                   fontSize: 16,
                 ),
               ),
-              SizedBox(height: 30),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(primary: Color(0xFF104A89)),
-                onPressed: () {},
-                child: Text(
-                  'SOLICITAR',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+              SizedBox(height: 20),
+              Container(
+                height: 50,
+                alignment: Alignment.centerLeft,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomRight,
+                    end: Alignment.topLeft,
+                    colors: [Color(0xFFDA97FF), Color(0xFF138AB6)],
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
                 ),
+                child: SizedBox.expand(
+                    child: TextButton(
+                  onPressed: () {},
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(left: 25),
+                        child: Text(
+                          'SOLICITAR',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontSize: 18),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(right: 25),
+                        child: Icon(
+                          Icons.check_circle_outline,
+                          color: Colors.white,
+                        ),
+                      )
+                    ],
+                  ),
+                )),
               ),
             ]),
           ),

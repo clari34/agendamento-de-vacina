@@ -56,28 +56,93 @@ class _OpPageState extends State<OpPage> {
             padding: const EdgeInsets.all(8.0),
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-              SizedBox(height: 30),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(primary: Color(0xFF104A89)),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => AgendPage()),
-                  );
-                },
-                child: Text(
-                  'SOLICITAR AGENDAMENTO',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+              Container(
+                height: 50,
+                alignment: Alignment.centerLeft,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomRight,
+                    end: Alignment.topLeft,
+                    colors: [Color(0xFFDA97FF), Color(0xFF138AB6)],
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
                 ),
+                child: SizedBox.expand(
+                    child: TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => AgendPage()),
+                    );
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(left: 25),
+                        child: Text(
+                          'SOLICITAR AGENDAMENTO',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontSize: 18),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(right: 25),
+                        child: Icon(
+                          Icons.today,
+                          color: Colors.white,
+                        ),
+                      )
+                    ],
+                  ),
+                )),
               ),
-              SizedBox(height: 30),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(primary: Color(0xFF104A89)),
-                onPressed: () {},
-                child: Text(
-                  'VER AGENDAMENTO',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+              SizedBox(height: 40),
+              Container(
+                height: 50,
+                alignment: Alignment.centerLeft,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomRight,
+                    end: Alignment.topLeft,
+                    colors: [Color(0xFFDA97FF), Color(0xFF138AB6)],
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
                 ),
+                child: SizedBox.expand(
+                    child: TextButton(
+                  onPressed: () {},
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(left: 25),
+                        child: Text(
+                          'VER AGENDAMENTO',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontSize: 18),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(right: 25),
+                        child: Icon(
+                          Icons.perm_contact_calendar,
+                          color: Colors.white,
+                        ),
+                      )
+                    ],
+                  ),
+                )),
               ),
             ]),
           ),

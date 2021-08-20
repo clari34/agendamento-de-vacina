@@ -75,11 +75,11 @@ class _CadsPageState extends State<CadsPage> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 7),
+                SizedBox(height: 5),
                 TextField(
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
-                      labelText: 'CPF',
+                      labelText: 'CPF (apenas o número, sem "." ou "-")',
                       labelStyle: TextStyle(
                         color: Colors.black38,
                         fontWeight: FontWeight.w400,
@@ -89,7 +89,7 @@ class _CadsPageState extends State<CadsPage> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 7),
+                SizedBox(height: 5),
                 TextField(
                   obscureText: true,
                   decoration: InputDecoration(
@@ -103,7 +103,7 @@ class _CadsPageState extends State<CadsPage> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 7),
+                SizedBox(height: 5),
                 TextField(
                   keyboardType: TextInputType.name,
                   decoration: InputDecoration(
@@ -117,11 +117,11 @@ class _CadsPageState extends State<CadsPage> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 7),
+                SizedBox(height: 5),
                 TextField(
                   keyboardType: TextInputType.datetime,
                   decoration: InputDecoration(
-                      labelText: 'Data de Nascimento',
+                      labelText: 'Data de Nascimento (Ex.: 22/22/2222)',
                       labelStyle: TextStyle(
                         color: Colors.black38,
                         fontWeight: FontWeight.w400,
@@ -131,7 +131,7 @@ class _CadsPageState extends State<CadsPage> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 7),
+                SizedBox(height: 5),
                 TextField(
                   keyboardType: TextInputType.name,
                   decoration: InputDecoration(
@@ -145,19 +145,52 @@ class _CadsPageState extends State<CadsPage> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 7),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: Color(0xFF104A89)),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => OpPage()),
-                    );
-                  },
-                  child: Text(
-                    'CADASTRAR',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                SizedBox(height: 5),
+                Container(
+                  height: 50,
+                  alignment: Alignment.centerLeft,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.bottomRight,
+                      end: Alignment.topLeft,
+                      colors: [Color(0xFFDA97FF), Color(0xFF138AB6)],
+                    ),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
+                    ),
                   ),
+                  child: SizedBox.expand(
+                      child: TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => OpPage()),
+                      );
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Padding(
+                          padding: EdgeInsets.only(left: 25),
+                          child: Text(
+                            "Cadastrar",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontSize: 18),
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(right: 25),
+                          child: Icon(
+                            Icons.how_to_reg,
+                            color: Colors.white,
+                          ),
+                        )
+                      ],
+                    ),
+                  )),
                 ),
               ],
             ),
