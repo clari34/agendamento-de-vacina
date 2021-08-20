@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_application_1/solicitacao.dart';
+import 'package:flutter_application_1/ver_agendamento.dart';
 
 class OpPage extends StatefulWidget {
   const OpPage({Key? key}) : super(key: key);
@@ -118,7 +119,12 @@ class _OpPageState extends State<OpPage> {
                 ),
                 child: SizedBox.expand(
                     child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ViewPage()),
+                    );
+                  },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
