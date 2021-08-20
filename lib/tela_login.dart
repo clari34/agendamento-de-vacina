@@ -32,7 +32,10 @@ class _HomePageState extends State<HomePage> {
       flexibleSpace: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
-          colors: [Color(0xFF2AF598), Color(0xFF08AEEA)],
+          colors: [
+            Color(0xFFDA97FF), 
+            Color(0xFF138AB6)
+          ],
           begin: Alignment.bottomRight,
           end: Alignment.topLeft,
         )),
@@ -100,7 +103,10 @@ class _HomePageState extends State<HomePage> {
                 gradient: LinearGradient(
                   begin: Alignment.bottomRight,
                   end: Alignment.topLeft,
-                  colors: [Color(0xFF80D0C7), Color(0xFF0093E9)],
+                  colors: [
+                    Color(0xFFDA97FF), 
+                    Color(0xFF138AB6)
+                  ],
                 ),
                 borderRadius: BorderRadius.all(
                   Radius.circular(10),
