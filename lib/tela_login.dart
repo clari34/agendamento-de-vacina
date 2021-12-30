@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_application_1/cadastro.dart';
+import 'package:flutter_application_1/database/database_helper.dart';
+import 'package:flutter_application_1/database/vacinacao_dao.dart';
 import 'package:flutter_application_1/op_agendamento.dart';
 import 'package:flutter_application_1/infos.dart';
+import 'package:flutter_application_1/teste.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,6 +19,9 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: buildAppBar(),
       body: buildBody(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => VacinacaoDao().cadastrarUsuario(),
+      ),
     );
   }
 
@@ -32,10 +38,7 @@ class _HomePageState extends State<HomePage> {
       flexibleSpace: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
-          colors: [
-            Color(0xFFDA97FF), 
-            Color(0xFF138AB6)
-          ],
+          colors: [Color(0xFFDA97FF), Color(0xFF138AB6)],
           begin: Alignment.bottomRight,
           end: Alignment.topLeft,
         )),
@@ -103,10 +106,7 @@ class _HomePageState extends State<HomePage> {
                 gradient: LinearGradient(
                   begin: Alignment.bottomRight,
                   end: Alignment.topLeft,
-                  colors: [
-                    Color(0xFFDA97FF), 
-                    Color(0xFF138AB6)
-                  ],
+                  colors: [Color(0xFFDA97FF), Color(0xFF138AB6)],
                 ),
                 borderRadius: BorderRadius.all(
                   Radius.circular(10),
@@ -117,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => OpPage()),
+                    MaterialPageRoute(builder: (context) => OpPage1()),
                   );
                 },
                 child: Row(

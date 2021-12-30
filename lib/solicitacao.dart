@@ -157,9 +157,9 @@ class _AgendPageState extends State<AgendPage> {
                 child: SizedBox.expand(
                     child: TextButton(
                   onPressed: () {
-                      Navigator.push(
+                    Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ViewPage()),
+                      MaterialPageRoute(builder: (context) => AgendPagePage()),
                     );
                   },
                   child: Row(

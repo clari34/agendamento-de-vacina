@@ -122,7 +122,7 @@ class _OpPageState extends State<OpPage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ViewPage()),
+                      MaterialPageRoute(builder: (context) => AgendPagePage()),
                     );
                   },
                   child: Row(
