@@ -14,6 +14,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  TextEditingController controllerCpf = TextEditingController();
+  TextEditingController controllerSenha = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,6 +66,7 @@ class _HomePageState extends State<HomePage> {
             ),
             SizedBox(height: 20),
             TextFormField(
+              controller: controllerCpf,
               autofocus: true,
               keyboardType: TextInputType.number,
               style: TextStyle(fontSize: 18),
@@ -78,6 +81,7 @@ class _HomePageState extends State<HomePage> {
             ),
             SizedBox(height: 10),
             TextFormField(
+              controller: controllerSenha,
               autofocus: true,
               obscureText: true,
               style: TextStyle(fontSize: 18),
@@ -117,7 +121,7 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => OpPage1()),
+                    MaterialPageRoute(builder: (context) => OpPage()),
                   );
                 },
                 child: Row(
@@ -180,5 +184,10 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     );
+  }
+
+  onPressed() {
+    print('Cpf: ${controllerCpf.text}');
+    print('Senha: ${controllerSenha.text}');
   }
 }

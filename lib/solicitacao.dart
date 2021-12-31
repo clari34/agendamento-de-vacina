@@ -56,7 +56,7 @@ class _AgendPageState extends State<AgendPage> {
             padding: const EdgeInsets.all(8.0),
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-              TextField(
+              TextFormField(
                 keyboardType: TextInputType.name,
                 decoration: InputDecoration(
                     labelText: 'Confirme seu nome completo',
@@ -70,7 +70,7 @@ class _AgendPageState extends State<AgendPage> {
                 ),
               ),
               SizedBox(height: 20),
-              TextField(
+              TextFormField(
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                     labelText:
@@ -85,7 +85,7 @@ class _AgendPageState extends State<AgendPage> {
                 ),
               ),
               SizedBox(height: 20),
-              TextField(
+              TextFormField(
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                     labelText: 'Número do Cartão do SUS',
@@ -99,7 +99,7 @@ class _AgendPageState extends State<AgendPage> {
                 ),
               ),
               SizedBox(height: 20),
-              TextField(
+              TextFormField(
                 keyboardType: TextInputType.name,
                 decoration: InputDecoration(
                     labelText: 'Local de preferência (posto de saúde)',
@@ -113,7 +113,7 @@ class _AgendPageState extends State<AgendPage> {
                 ),
               ),
               SizedBox(height: 20),
-              TextField(
+              TextFormField(
                 keyboardType: TextInputType.datetime,
                 decoration: InputDecoration(
                     labelText: 'Dia de preferência (Ex.: 22/22/2222)',
@@ -127,7 +127,7 @@ class _AgendPageState extends State<AgendPage> {
                 ),
               ),
               SizedBox(height: 20),
-              TextField(
+              TextFormField(
                 keyboardType: TextInputType.name,
                 decoration: InputDecoration(
                     labelText: 'Horário de preferência (manhâ, tarde ou noite)',

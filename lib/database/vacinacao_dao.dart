@@ -22,7 +22,7 @@ class VacinacaoDao {
       listaVacinas.add(vacinas);
     }
 
-    print(listaVacinas.length);
+    await Future.delayed(Duration(seconds: 3));
     return listaVacinas;
   }
 }

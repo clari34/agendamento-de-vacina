@@ -63,7 +63,7 @@ class _CadsPageState extends State<CadsPage> {
                   height: 100,
                   child: Image.asset('assets/imagens/user.jpeg'),
                 ),
-                TextField(
+                TextFormField(
                   keyboardType: TextInputType.name,
                   decoration: InputDecoration(
                       labelText: 'Nome Completo',
@@ -77,7 +77,7 @@ class _CadsPageState extends State<CadsPage> {
                   ),
                 ),
                 SizedBox(height: 5),
-                TextField(
+                TextFormField(
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                       labelText: 'CPF (apenas o número, sem "." ou "-")',
@@ -91,7 +91,7 @@ class _CadsPageState extends State<CadsPage> {
                   ),
                 ),
                 SizedBox(height: 5),
-                TextField(
+                TextFormField(
                   obscureText: true,
                   decoration: InputDecoration(
                       labelText: 'Senha',
@@ -105,7 +105,7 @@ class _CadsPageState extends State<CadsPage> {
                   ),
                 ),
                 SizedBox(height: 5),
-                TextField(
+                TextFormField(
                   keyboardType: TextInputType.name,
                   decoration: InputDecoration(
                       labelText: 'Cidade e UF',
@@ -119,7 +119,7 @@ class _CadsPageState extends State<CadsPage> {
                   ),
                 ),
                 SizedBox(height: 5),
-                TextField(
+                TextFormField(
                   keyboardType: TextInputType.datetime,
                   decoration: InputDecoration(
                       labelText: 'Data de Nascimento (Ex.: 22/22/2222)',
@@ -133,7 +133,7 @@ class _CadsPageState extends State<CadsPage> {
                   ),
                 ),
                 SizedBox(height: 5),
-                TextField(
+                TextFormField(
                   keyboardType: TextInputType.name,
                   decoration: InputDecoration(
                       labelText: 'Sexo',
